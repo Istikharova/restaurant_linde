@@ -1,0 +1,243 @@
+/* Stylesheet für alle Header, Navigation und Footer */
+
+/* Inhatsverzeichnis */
+
+/* 0. hintergrundbild/body
+   1. orange strich  
+   2. header mit logo
+   3 navigation
+    3.1 dropdown navi
+   4. footer */
+
+/* hintergrundbild im body */
+body {
+  background-image: url(../bilder/hintergrund.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+/* 1. orangestrich für alle */
+.strich {
+  width: 90vw;
+  height: 1px;
+  background: rgba(226, 141, 71, 0.5);
+  margin: auto;
+}
+/* 2.  header mit logo*/
+header {
+  background: var(--braun);
+  width: 100vw;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+header img {
+  margin-top: 5.5rem;
+}
+header h1 {
+  color: rgb(201, 242, 148);
+  font-size: 2em;
+  padding: 2rem 0;
+}
+
+/* 3. navigation */
+nav {
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+}
+
+nav > ul {
+  background: #2b1f15;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+nav ul li {
+  list-style: none;
+  color: rgb(226, 141, 71);
+  padding: 1rem 2rem;
+  font-size: 1.5em;
+}
+nav ul li a {
+  text-decoration: none;
+  list-style: none;
+  color: rgb(226, 141, 71);
+}
+
+nav li {
+  cursor: pointer;
+}
+
+/* nav logo */
+nav .logo {
+  display: none;
+}
+
+/* 3.1 dropdown nav  */
+
+.subnav {
+  position: absolute;
+  top: 100%;
+  font-size: 0.5em;
+  background: #2b1f15;
+  display: none;
+}
+nav .restaurant i {
+  display: none;
+}
+
+/* burgermenü */
+nav .burger_menü {
+  display: none;
+}
+
+header {
+  background: var(--braun);
+  width: 100vw;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+header img {
+  margin-top: 5.5rem;
+}
+header h1 {
+  color: rgb(201, 242, 148);
+  font-size: 2em;
+  padding: 2rem 0;
+}
+
+/* footer */
+
+footer {
+  background: rgba(22, 11, 8, 0.9);
+  width: 90vw;
+  height: auto;
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+footer address {
+  color: rgb(219, 161, 107);
+  font-style: normal;
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+footer .icon {
+  padding: 1rem 0;
+}
+
+footer .datenschutz {
+  padding-bottom: 1rem;
+}
+footer .datenschutz small {
+  padding-left: 1rem;
+}
+@media all and (max-width: 1086px) {
+  footer {
+    width: 100vw;
+  }
+  .strich {
+    width: 100vw;
+  }
+}
+@media all and (max-width: 900px) {
+  /* burgermenü */
+
+  nav .fa-bars {
+    color: var(--grün);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1.5rem;
+    display: inline-block;
+  }
+
+  nav {
+    width: initial;
+    width: 100%;
+    position: absolute;
+    position: fixed;
+    background: var(--braun);
+  }
+
+  nav .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  nav .nav.active {
+    display: inline-block;
+  }
+  nav .restaurant {
+    width: 5rem;
+  }
+
+  /* nav img logo */
+
+  nav .logoac {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: 45%;
+    top: 2%;
+  }
+  /* dropdown MENÜ */
+
+  .restaurant .subnav {
+    position: static;
+  }
+
+  /* linde logo */
+  header img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* footer */
+
+  footer {
+    width: 100vw;
+  }
+  footer address {
+    font-size: 0.7em;
+  }
+
+  footer .icon img {
+    width: 40px;
+    height: 40px;
+  }
+}

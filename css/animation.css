@@ -1,0 +1,258 @@
+/* Stylesheet für Landingpage Animation */
+
+/* Inhaltsverzeichnis */
+
+/* 1.0 logo im header
+   2.0 main
+    2.1 navigation
+    2.2 striche
+   3.0 Blätter
+    3.1 blätter animieren
+    3.2 animation für blätter
+    4.0 media queries
+
+    */
+
+/* === Small CSS Reset === */
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: "roboto", Arial;
+  background: var(--braun);
+}
+
+/* 1.0 logo im header */
+
+header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+header img {
+  margin-top: 4rem;
+  z-index: 998;
+}
+header h1 {
+  color: rgb(201, 242, 148);
+  font-size: 2em;
+  padding: 2rem 0;
+}
+
+/* 2.0 main */
+main {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 50vh;
+  background: var(--braun);
+  z-index: 9999;
+  position: relative;
+}
+
+/* 2.1 navigation */
+main klein_nav {
+  position: absolute;
+  left: 50%;
+}
+main a {
+  position: relative;
+  display: inline-block;
+  padding: 2rem 3rem;
+  color: var(--orange);
+  text-decoration: none;
+  font-size: 2rem;
+  -webkit-transition: 1s;
+  -webkit-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+a:hover {
+  background-image: url(../bilder/blatt_grün.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0.8em;
+  color: var(--braun);
+}
+/* 2.1 striche */
+
+main .strich_links,
+main .strich_rechts {
+  width: 100%;
+  height: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), to(var(--orange)));
+  background: linear-gradient(180deg, transparent 50%, var(--orange));
+}
+main .strich_rechts {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+/* 3.0 fallende blätter */
+
+.b_container {
+  width: 100%;
+  height: 90%;
+  background: var(--braun);
+  display: block;
+  overflow: hidden;
+}
+.b_container .blaetter {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.blaetter div {
+  position: absolute;
+}
+.blaetter div img {
+  opacity: 0.5;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* 3.1 blätter animieren */
+
+.blaetter div:nth-child(1) {
+  left: 20%;
+  -webkit-animation: animate 15s linear infinite;
+  animation: animate 15s linear infinite;
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+.blaetter div:nth-child(2) {
+  left: 10%;
+  -webkit-animation: animate 20s linear infinite;
+  animation: animate 20s linear infinite;
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+.blaetter div:nth-child(3) {
+  left: 30%;
+  -webkit-animation: animate 25s linear infinite;
+  animation: animate 25s linear infinite;
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+.blaetter div:nth-child(4) {
+  left: 0;
+  -webkit-animation: animate 13s linear infinite;
+  animation: animate 13s linear infinite;
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+.blaetter div:nth-child(5) {
+  left: 80%;
+  -webkit-animation: animate 28s linear infinite;
+  animation: animate 28s linear infinite;
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+.blaetter div:nth-child(6) {
+  left: 35%;
+  -webkit-animation: animate 30s linear infinite;
+  animation: animate 30s linear infinite;
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+.blaetter div:nth-child(7) {
+  left: 85%;
+  -webkit-animation: animate 32s linear infinite;
+  animation: animate 32s linear infinite;
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+.blaetter div:nth-child(8) {
+  left: 60%;
+  -webkit-animation: animate 12s linear infinite;
+  animation: animate 12s linear infinite;
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+
+/* 3.3 animation für blätter */
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    top: -10;
+    -webkit-transform: translateX(-2rem) rotate(45deg);
+    transform: translateX(-2rem) rotate(45deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    top: -10%;
+    -webkit-transform: translateX(-2rem) rotate(0deg);
+    transform: translateX(-2rem) rotate(0deg);
+  }
+  5% {
+    opacity: 0.3;
+    top: -8%;
+  }
+  10% {
+    opacity: 1;
+    top: -5%;
+  }
+  20% {
+    -webkit-transform: translateX(-2rem) rotate(45deg);
+    transform: translateX(-2rem) rotate(45deg);
+  }
+  40% {
+    -webkit-transform: translateX(-2rem) rotate(90deg);
+    transform: translateX(-2rem) rotate(90deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2rem) rotate(165deg);
+    transform: translateX(-2rem) rotate(165deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2rem) rotate(180deg);
+    transform: translateX(-2rem) rotate(180deg);
+  }
+  100% {
+    top: 110%;
+    -webkit-transform: translateX(-2rem) rotate(225deg);
+    transform: translateX(-2rem) rotate(225deg);
+  }
+}
+
+/* 4.0 media queries */
+
+@media all and (max-width: 600px) {
+  main {
+    width: 100vw;
+  }
+  main a {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+  main .klein_nav {
+    display: -webkit-box;
+    width: 100vw;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-around;
+    left: 0;
+  }
+  main a:hover {
+    font-size: 0.5rem;
+  }
+}

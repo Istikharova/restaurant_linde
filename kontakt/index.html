@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+
+    <!-- css datei -->
+    <link rel="stylesheet" href="../css/reset_schrift_root.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/kontakt.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+    <!-- navigation -->
+    
+    <nav>
+        <i class="burger_menü fas fa-bars"></i>
+        <img class="logo" src="../bilder/logo.svg" alt="">
+      <ul class="nav">
+        
+        <li><a href="../start/index.html">START</a></li>
+        <li><a href="#">MITTAGSMENÜ</a></li>
+        <li class="restaurant">
+          RESTAURANT
+          <ul class="subnav">
+            <li><a href="#">MENÜ</a></li>
+            <li><a href="../galerie/index.html">GALERIE</a></li>
+          </ul>
+        </li>
+        <li><a href="#">ÜBER UNS</a></li>
+        <li><a href="#">KONTAKT</a></li>
+      </ul>
+    </nav>
+    <!-- header mit logo -->
+    <header>
+      <img
+        src="../bilder/logo.svg"
+        alt="Linde logo"
+        width="250"
+        height="250"
+        title="restaurant linde logo"
+      />
+      <h1>House of Cordon-Bleu</h1>
+    </header>
+    <!-- section kontakt -->
+    <section id="kontakt">
+      <h2>KONTAKT</h2>
+      <div class="strich_k"><!-- hier der orange strich --></div>
+
+      <!-- kontaktdaten -->
+      <div class="info">
+        <section class="kontakte ort">
+          <h3>Standort</h3>
+          <address>
+            Restaurant zur linde
+            <br />
+            Aathalstrasse 50
+            <br />
+            8610 Uster
+          </address>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.150502415869!2d8.731259115585717!3d47.344966879168105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479abb53ca302a97%3A0xab9d979cd52d1f8b!2sAathalstrasse%2050%2C%208610%20Uster!5e1!3m2!1sde!2sch!4v1591709616268!5m2!1sde!2sch"
+            width="300"
+            height="300"
+            title="google maps"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </section>
+
+        <section class="kontakte angaben">
+          <h3>Kontakt</h3>
+          <div class="tel">
+            <p>Tel. 41 44 940 17 27</p>
+            <p>E-mail: info&#64;linde-uster.ch</p>
+          </div>
+        </section>
+
+        <section class="kontakte zeit">
+          <h3>Öffnungszeiten</h3>
+          <ul>
+            <li>Montag</li>
+            <li>08:30 - 14:00</li>
+          </ul>
+          <ul>
+            <li>Dienstag-Freitag</li>
+            <li>08:30 - 14:00</li>
+            <li>17:00 - 23:00</li>
+          </ul>
+          <ul>
+            <li>Samstag-Sonntag</li>
+            <li>17:00 - 23:00</li>
+          </ul>
+        </section>
+      </div>
+      <!-- icon zahlungskarten -->
+      <div class="icon">
+        <img src="../bilder/icon/cc-amex-brands.svg" alt="american express" />
+        <img src="../bilder/icon/cc-mastercard-brands.svg" alt=".mastercard" />
+        <img src="../bilder/icon/cc-visa-brands.svg" alt="visa" />
+      </div>
+    </section>
+    <!-- section 2 formular -->
+    <section id="formular">
+      <p>SO ERREICHEN SIE UNS SCHNELL UND EINFACH</p>
+      <h2>KONTAKTFORMULAR</h2>
+      <p>
+        Um einen einen Tisch zu reservieren bitten wir Sie, uns direkt
+        anzurufen. Während des Tagesgeschäftes kann es vorkommen,<br />
+        dass wir nicht immer den E-Mail Eingang überprüfen. Für alle anderen
+        Mitteilungen können Sie gerne die unten stehende Eingabemaske
+        verwenden<br />
+        Wir melden uns dann so rasch wie möglich bei Ihnen.
+      </p>
+
+      <!-- kontaktformlar -->
+      <form action="">
+        <input type="text" name="vorname" id="vorname" placeholder="Vorname" />
+        <label for="vorname">Vorname</label>
+
+        <input type="text" id="nachname" placeholder="Nachname" />
+        <label for="nachname">Name</label>
+        
+      
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <label for="email">Email</label>
+        
+        <input type="tel" name="tel" id="tel" placeholder="Telefon" />
+        <label for="tel">Telefon</label>
+      
+        <textarea
+          name="nachricht"
+          id="nachricht"
+          cols="30"
+          rows="10"
+          placeholder="Ihre Mitteilung"
+        ></textarea>
+        <label for="nachricht">Ihre Mitteilung</label>
+        <button type="submit">SENDEN</button>
+      </form>
+    </section>
+    <div class="strich"><!-- hier der orange strich --></div>
+    <!-- footer -->
+    <footer>
+      <address>
+        Restaurant Linde Gastro PSSK.GmbH
+        <br />
+        Aathalstrasse 50 8610 Uster
+      </address>
+
+      <!-- icon wlan facebook -->
+      <div class="icon">
+        <img
+          src="../bilder/icon/wifi-solid.svg"
+          width="50"
+          height="50"
+          alt="wlan"
+          title="bei uns gibt es Wlan"
+        />
+        <img
+          src="../bilder/icon/facebook.svg"
+          alt="facebook"
+          width="50"
+          height="50"
+          title="Facebook"
+        />
+      </div>
+      <!-- datenschutz -->
+      <div class="datenschutz">
+        <small>Impressum</small>
+        <small>Datenschutz</small>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../javaScript/navigation.js"></script>
+    <script src="../javaScript/formular.js"></script>
+  </body>
+</html>

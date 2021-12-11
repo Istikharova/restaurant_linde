@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant zur Linde</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+
+    <!-- css datei -->
+    <link rel="stylesheet" href="../css/reset_schrift_root.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/start.css" />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navigation -->
+
+    <nav>
+        <i class="burger_menü fas fa-bars"></i>
+        <img class="logo" src="../bilder/logo.svg" alt="">
+      <ul class="nav">
+        <li><a href="#">START</a></li>
+        <li><a href="#">MITTAGSMENÜ</a></li>
+        <li class="restaurant">
+          RESTAURANT
+          <ul class="subnav">
+            <li><a href="#">MENÜ</a></li>
+            <li><a href="../galerie/index.html">GALERIE</a></li>
+          </ul>
+        </li>
+        <li><a href="#">ÜBER UNS</a></li>
+        <li><a href="../kontakt/index.html">KONTAKT</a></li>
+      </ul>
+    </nav>
+    <!-- header -->
+    <header>
+      <img
+        src="../bilder/logo.svg"
+        alt="Linde logo"
+        width="250"
+        height="250"
+        title="restaurant linde logo"
+      />
+      <h1>House of Cordon-Bleu</h1>
+    </header>
+    <!-- main mit 
+        willkommrn text, bild und telefonnummer gross -->
+
+    <main>
+      <article>
+        <h4>Willkommen</h4>
+        Schalten Sie vom Alltag ab, während Sie sich bei einem kühlen Bier,
+        Apéro oder ein feinen Essen und einem Glas Wein, oder ein feinen Dessert
+        genießen. <br /><br />
+        Unsere reichhaltige Speisekarte beinhaltet ein paar Hausspezialitäten,
+        für die einige Stammgäste einen weiten Weg auf sich nehmen: Da sind die
+        beliebten Riesen-Cordon-Bleus, die Kalbsleber mit Rösti, die reich
+        garnierten Fitnessteller, Knoblibrot und die belegten, warmen Baguettes
+        (Submarines) - um nur einige aufzuzählen. Werfen Sie doch einen Blick
+        auf unser Angebot oder - noch besser - kommen Sie zu uns und genießen
+        Ihren Aufenthalt in der Gaststube oder unserer Terrasse.<br /><br />
+        Auserdem bietet unser Parkplatzt viel Platzt, auch für mehrere LKWs.
+      </article>
+      <!-- slider mit telefonr und jetzt reservieren -->
+      <div class="slider">
+        <i class="fas fa-arrow-left"></i>
+        <div class="bild">
+          <div class="slide aktiv">
+            <img
+              src="../bilder/essen/cb_fertig_neu.jpg"
+              alt="Cordon-Bleu mit Pommes und Salat"
+            />
+          </div>
+          <div class="slide">
+            <img src="../bilder/essen/dessert.jpg" alt="Rösti" />
+          </div>
+          <div class="slide">
+            <img src="../bilder/essen/salat.jpg" alt="Gemischter Salat" />
+          </div>
+          <div class="slide">
+            <img
+              src="../bilder/essen/teigwaren.jpg"
+              alt="Penne mit Rahmsauce"
+            />
+          </div>
+        </div>
+        <i class="fas fa-arrow-right"></i>
+
+        <div class="reservation">
+          <h2>JETZT RESERVIEREN</h2>
+          <h2>&#9990; 044 940 17 27</h2>
+        </div>
+        <div class="punkte">
+          <div class="punkt"></div>
+          <div class="punkt"></div>
+          <div class="punkt"></div>
+          <div class="punkt"></div>
+        </div>
+        <div class="autoplay">
+          <div class="toggle_animation"></div>
+          <p class="play_text">Autoplay</p>
+        </div>
+      </div>
+    </main>
+
+    <div class="strich"><!-- hier der orange strich --></div>
+
+    <!-- section Kontakt mit
+        lageplan, maps, oeffnungszeiten -->
+    <section id="kontakt">
+      <div class="lageplan">
+        <h3>Lageplan</h3>
+        <p>
+          So erreichen Sie uns
+          <br />
+          &raquo;<a href="../kontakt/index.html">Kontakt</a>
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.150502415869!2d8.731259115585717!3d47.344966879168105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479abb53ca302a97%3A0xab9d979cd52d1f8b!2sAathalstrasse%2050%2C%208610%20Uster!5e1!3m2!1sde!2sch!4v1591709616268!5m2!1sde!2sch"
+          width="300"
+          height="300"
+          title="google maps"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+
+      <div class="oeffnung">
+        <h3>Öffnungszeiten</h3>
+        <div class="zeiten">
+          <ul>
+            <li>Montag</li>
+            <li>08:30 - 14:00</li>
+          </ul>
+          <ul>
+            <li>Dienstag-Freitag</li>
+            <li>08:30 - 14:00</li>
+            <li>17:00 - 23:00</li>
+          </ul>
+          <ul>
+            <li>Samstag-Sonntag</li>
+            <li>17:00 - 23:00</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="strich"><!-- hier der orange strich --></div>
+
+    <!-- footer -->
+    <footer>
+      <address>
+        Restaurant Linde Gastro PSSK.GmbH
+        <br />
+        Aathalstrasse 50 8610 Uster
+      </address>
+
+      <div class="icon">
+        <img
+          src="../bilder/icon/wifi-solid.svg"
+          width="50"
+          height="50"
+          alt="wlan"
+          title="bei uns gibt es Wlan"
+        />
+        <img
+          src="../bilder/icon/facebook.svg"
+          alt="facebook"
+          width="50"
+          height="50"
+          title="Facebook"
+        />
+      </div>
+
+      <div class="datenschutz">
+        <small>Impressum</small>
+        <small>Datenschutz</small>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../javaScript/navigation.js"></script>
+    <script src="../javaScript/slider.js"></script>
+  </body>
+</html>

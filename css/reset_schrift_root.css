@@ -1,0 +1,36 @@
+:root {
+  --braun: rgba(24, 12, 1, 0.9);
+  --orange: rgb(226, 141, 71);
+  --grün: rgb(201, 242, 148);
+  --baige: rgb(219, 161, 107);
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* schrift */
+@font-face {
+  font-family: "roboto";
+  src: url(../schrift/roboto-regular-webfont.woff) format("woff"),
+    url(../schrift/roboto-regular-webfont.woff2) format("woff 2");
+}
+@font-face {
+  font-family: "robotothin";
+  src: url(../schrift/roboto-thin-webfont.woff) format("woff"),
+    url(../schrift/roboto-thin-webfont.woff2) format("woff 2");
+}
+@font-face {
+  font-family: "roboto";
+  src: url(../schrift/roboto-bold1-webfont.woff) format("woff"),
+    url(../schrift/roboto-bold1-webfont.woff2) format("woff 2");
+  font-weight: bold;
+}

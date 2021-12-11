@@ -1,0 +1,319 @@
+/* Stylesheet für Kontakt */
+
+/* Inhaltsverzeichnis */
+
+/* 0. section anpassen
+   1. section kontakt
+    1.1 kontaktdaten mit flex
+    1.2 icon
+   2 section formular
+    2.1 formular
+    2.2 button 
+   3 mediaqueries*/
+
+/* 0. section grésse anpassen */
+#kontakt,
+#formular {
+  background: var(--braun);
+  width: 90vw;
+  margin: 1rem auto;
+  height: auto;
+  position: relative;
+}
+/* 1.0 section kontakt */
+
+#kontakt h2 {
+  color: var(--baige);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  padding: 3rem 0;
+  margin-left: 2.5rem;
+}
+#kontakt .info .kontakte h3 {
+  color: var(--baige);
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+#kontakt .kontakte address {
+  font-style: normal;
+}
+
+#kontakt .kontakte ul li {
+  list-style: none;
+}
+
+#kontakt .strich_k {
+  height: 1px;
+  width: 85vw;
+  margin: auto;
+  background: rgba(226, 141, 71, 0.5);
+}
+
+/* 1.1 kontaktdaten  mit flex positionieren*/
+#kontakt .info {
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 2em 0;
+  position: relative;
+}
+#kontakt .info .kontakte {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+#kontakt .info .kontakte ul {
+  padding-bottom: 2rem;
+}
+#kontakt .kontakte iframe {
+  padding-top: 3rem;
+}
+
+/* 1.2 icon */
+#kontakt .icon img {
+  width: 3rem;
+  height: 5rem;
+  margin: 0.5rem;
+}
+#kontakt .icon {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  margin-right: 4rem;
+}
+
+/* 2 section formular */
+#formular {
+  padding-bottom: 4rem;
+}
+
+/* so erreichen Sie uns schnell und einfach */
+#formular p:first-child {
+  font-family: "robotothin", Arial, Helvetica, sans-serif;
+  display: block;
+  font-size: 3em;
+  text-align: center;
+  color: rgba(224, 217, 217, 0.7);
+  padding-top: 2rem;
+}
+#formular h2 {
+  color: var(--grün);
+  font-size: 2rem;
+  font-weight: normal;
+  padding: 3rem;
+}
+#formular p {
+  font-weight: normal;
+  margin-left: 3rem;
+}
+/* 2.1 formular */
+
+#formular form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  width: 40vw;
+  margin: 10rem auto 0 auto;
+}
+#formular form label {
+  color: var(--baige);
+  text-transform: uppercase;
+}
+#formular form input {
+  height: 2rem;
+}
+#formular form label {
+  padding-bottom: 1rem;
+}
+
+#formular form input,
+#formular form textarea {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 1rem;
+  font-size: 1em;
+  border: solid 1px var(--baige);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: var(--braun);
+}
+#formular form input,
+#formular form textarea:focus {
+  outline: none;
+}
+#formular form textarea {
+  border: solid 1px var(--baige);
+}
+
+/* 2.2 Button */
+
+#formular form button {
+  color: var(--grün);
+  background: var(--braun);
+  border: none;
+  width: 6vw;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  display: -webkit-box;
+  display: flex;
+  align-self: flex-end;
+  cursor: pointer;
+}
+#formular form button:hover {
+  color: var(--baige);
+}
+
+/* 3 mediaqueries */
+
+@media all and (max-width: 1280px) {
+  /* kontaktformular */
+
+  #formular form {
+    width: 80vw;
+  }
+}
+@media all and (max-width: 1086px) {
+  /* beide section breite hintergrung  */
+
+  #kontakt,
+  #formular {
+    width: 100vw;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+  #kontakt .strich_k {
+    width: 90vw;
+  }
+
+  /* section kontakt */
+
+  /* so erreich sie uns schnell und einfach <p/> */
+  #formular p:first-child {
+    font-size: 2em;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #formular p:first-child {
+    display: none;
+  }
+  #formular form {
+    margin: 5rem auto;
+  }
+
+  /* tisch reservieren */
+
+  #formular p:nth-of-type(2) {
+    font-size: 0.7em;
+  }
+  /* icon master/visa karte */
+  #kontakt .icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.2rem;
+  }
+  /* formular */
+  #formular form {
+    margin: 2rem auto;
+  }
+}
+
+@media all and (min-width: 850px) and (max-width: 1000px) {
+  /* section kontaktdaten */
+
+  #kontakt .info .kontakte address,
+  #kontakt .info .kontakte p,
+  #kontakt .info .kontakte li {
+    font-size: 0.9em;
+  }
+}
+
+@media all and (max-width: 700px) {
+  /* titel kontakt */
+  #kontakt h2 {
+    padding: 2rem 0;
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 451px) and (max-width: 900px) {
+  /* section kontaktdaten */
+  #kontakt .info {
+    margin-left: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 3fr;
+  }
+  #kontakt .info .kontakte {
+    margin: initial;
+  }
+  #kontakt .info .zeit {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  #kontakt .ort {
+    position: relative;
+  }
+  #kontakt .info .kontakte iframe {
+    position: absolute;
+    top: 100%;
+  }
+}
+@media all and (max-width: 450px) {
+  /* section kontaktdaten */
+  #kontakt .info {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  #kontakt .kontakte iframe {
+    width: 80vw;
+    height: 40vw;
+  }
+  #kontakt .kontakte {
+    margin: 2rem;
+  }
+  #kontakt .icon {
+    margin: 0;
+    padding: 0 1rem;
+  }
+  /* section formular */
+
+  #formular {
+    padding: initial;
+  }
+  #formular p {
+    padding: 1.5rem;
+    margin: 0;
+  }
+  #formular h2 {
+    font-size: 1.5em;
+    padding: 1.5rem 0 0rem 3rem;
+    margin: 0;
+  }
+
+  #formular form button {
+    font-size: 0.5em;
+    width: 4rem;
+  }
+}

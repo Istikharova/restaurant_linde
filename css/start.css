@@ -1,0 +1,372 @@
+/* Stylesheet für Startseite */
+
+/* Inhaltsverzeichnis */
+
+/*1. Main hintergrund farbe
+  2. Main
+    2.1 wilkommentext
+    2.2 slider
+    2.3 jetzt resevieren und nummer
+  3. Section Kontakt
+    3.1 <h3>lageplan <h3>oeffunhszeiten <p>
+    3.2 <p> so erreichen sie uns
+    3.3 maps Oeffnungszeiten 
+  4. merdia queries */
+
+/* 1. main hintergrund farbe */
+main {
+  background: var(--braun);
+  width: 90vw;
+  height: auto;
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+/* 2. main */
+
+/* 2.1 willkommetext */
+
+main h4 {
+  color: rgb(219, 161, 107);
+  font-size: 2em;
+  padding: 4rem 0;
+  font-family: "robotothin", Arial, Helvetica, sans-serif;
+}
+main article {
+  width: 90%;
+  text-align: center;
+  margin: 0 4rem 0 4rem;
+  padding-bottom: 2rem;
+}
+
+/* 2.2 slider */
+
+.slider {
+  width: 90vw;
+  position: relative;
+}
+
+.bild {
+  display: -webkit-box;
+  width: 100%;
+  max-height: 70vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.slide img {
+  width: 90vw;
+}
+/* pfeil für slider */
+.slider .fa-arrow-left {
+  position: absolute;
+  top: 50%;
+  right: 95%;
+  font-size: 4rem;
+  cursor: pointer;
+  z-index: 2;
+  color: var(--baige);
+  opacity: 0.9;
+}
+
+.slider .fa-arrow-right {
+  position: absolute;
+  left: 95%;
+  top: 50%;
+  font-size: 4rem;
+  cursor: pointer;
+  z-index: 2;
+  color: var(--baige);
+  opacity: 0.8;
+}
+.fa-arrow-left:hover,
+.fa-arrow-right:hover {
+  color: white;
+}
+
+/* runde zahlen  */
+.slider .punkte {
+  position: absolute;
+  left: 43%;
+  bottom: 1%;
+  margin-bottom: 1rem;
+}
+.slider .punkt {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: var(--baige);
+  border-radius: 50%;
+}
+.slider .punkte .active {
+  background: var(--grün);
+}
+
+/* autoplay */
+.slider .autoplay {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  position: absolute;
+  left: 43%;
+  bottom: 11%;
+}
+.slider .toggle_animation {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  background: var(--orange);
+  border-radius: 50%;
+}
+.slider .actives {
+  background: var(--grün);
+}
+
+/* 2.3telefonnummer reservatiion */
+.reservation {
+  color: var(--braun);
+  background: rgba(22, 11, 8, 0.9);
+  display: -webkit-box;
+  display: flex;
+
+  padding: 1rem 2rem;
+  margin-left: auto;
+  position: absolute;
+  bottom: 85%;
+  width: 90vw;
+}
+.reservation h2 {
+  padding: 1rem;
+  color: rgb(201, 242, 148);
+}
+.reservation :last-child {
+  padding-left: 2rem;
+}
+
+/*3. section kontakt */
+
+#kontakt {
+  background: var(--braun);
+  width: 90vw;
+  height: auto;
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* 3.1 <h3>lageplan <h3>oeffnungszeiten <p>*/
+
+#kontakt h3 {
+  font-family: "robotothin", Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+/* 3.2 <p> so erreichen sie uns  */
+
+.lageplan p {
+  color: rgb(219, 161, 107);
+  font-weight: bold;
+}
+.lageplan p a {
+  text-decoration: none;
+  color: rgb(224, 153, 87);
+  font-weight: bold;
+}
+.lageplan p a:hover {
+  color: rgb(201, 242, 148);
+}
+
+/* 3.3 maps und oeffnungzeiten */
+
+.oeffnung .zeiten ul {
+  padding: 0.5rem;
+}
+.oeffnung .zeiten ul li {
+  list-style: none;
+  font-family: "robotothin", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+iframe {
+  margin-top: 3.5rem;
+  height: 40vh;
+  width: 40vw;
+  padding-bottom: 2rem;
+}
+
+/* 4.0 all media queries */
+@media all and (max-width: 1086px) {
+  /* beide section breite hintergrung  */
+
+  main,
+  #kontakt {
+    width: 100vw;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+
+  main .slider .bild {
+    width: 100vw;
+    height: 50vw;
+    right: 5.5%;
+  }
+
+  main .slider .bild img {
+    width: 100vw;
+    height: 50vw;
+  }
+  .slider .bild img:nth-child(1) {
+    height: 100%;
+  }
+
+  .slider .reservation {
+    bottom: 80%;
+    left: 30%;
+  }
+  @media all and (min-width: 901px) and (max-width: 1320px) {
+    /* main pfeil recht und links */
+    main .slider .fa-arrow-left {
+      right: 90%;
+    }
+    main .slider .fa-arrow-right {
+      left: 90%;
+    }
+    main .strich {
+      width: 100vw;
+    }
+    /* cordon-blue bild im slider */
+    main .slider .bild .slide img:nth-child(1) {
+      height: 100%;
+    }
+  }
+  @media all and (max-width: 900px) {
+    /* slider, reservation nummer*/
+
+    /* main pfeil recht und links */
+    main .slider .slider .fa-arrow-right,
+    main .slider .slider .fa-arrow-left {
+      font-size: 3rem;
+    }
+    main .slider .fa-arrow-left {
+      right: 89%;
+    }
+    main .slider .fa-arrow-right {
+      left: 89%;
+    }
+    /* reservation nummer */
+
+    /* pukte und autoplay */
+    .slider .punkte .punkt {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+    .slider .autoplay {
+      font-size: 0.5rem;
+      left: 44%;
+      bottom: 10%;
+    }
+  }
+  @media all and (max-width: 850px) {
+    /* pfeil für slider */
+
+    .reservation h2 {
+      padding: 0;
+    }
+
+    /* section kontakt */
+
+    #kontakt iframe {
+      width: 100%;
+      height: 30vh;
+    }
+    #kontakt .zeiten {
+      padding-bottom: 2rem;
+    }
+  }
+  @media all and (min-width: 620px) and (max-width: 849px) {
+    #kontakt h3 {
+      font-size: 2em;
+    }
+    #kontakt .zeiten ul li {
+      font-size: 1.5em;
+    }
+    .slider .autoplay {
+      bottom: 15%;
+    }
+  }
+
+  /*section main: autoplay kontakt lageplan, section:kontakt oeffnungszeiten von 0 bis 619px */
+  @media all and (max-width: 619px) {
+    /* autoplay punkte */
+
+    main .slider .punkte {
+      margin: 0;
+    }
+
+    #kontakt {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
+    .lageplan,
+    .oeffnung {
+      margin-left: 2rem;
+    }
+    #kontakt iframe {
+      width: 80vw;
+    }
+    #kontakt h3 {
+      font-size: 1.5rem;
+    }
+    #kontakt .oeffnung ul li {
+      font-size: 1em;
+    }
+  }
+
+  @media all and (max-width: 559px) {
+    /* main wilkommen bild und text */
+    main h4 {
+      font-size: 2em;
+    }
+    main article {
+      font-size: 1em;
+    }
+
+    /* main autoplay  */
+    main .slider .autoplay .toggle_animation {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+  @media all and (max-width: 558px) {
+    .reservation h2 {
+      font-size: 0.7em;
+    }
+    main .slider .fa-arrow-right,
+    main .slider .fa-arrow-left {
+      font-size: 1.5rem;
+    }
+  }
+  @media all and (max-width: 380px) {
+    main .reservation {
+      right: 10%;
+    }
+  }
+}

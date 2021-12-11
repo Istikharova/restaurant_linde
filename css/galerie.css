@@ -1,0 +1,220 @@
+/* Stylesheet für Galerie */
+
+/* Inhaltsverzeichnis */
+
+/* 1. Alle section anpassen
+   2. h2 und h3  anpassen
+   3. orange strich mit classe strich_kurz
+   4. bilder mit grid platzieren section locotion und terrasse
+     4.1 bilder richten section location
+     4.2 bilder richten section terrasse
+     4.3 bild haus
+     4.4 bilder hover effekt
+    5.0 lightbox
+      5.1 lightbox icon
+    6.0 media quearies*/
+
+#location,
+#terrasse {
+  background: var(--braun);
+  width: 90vw;
+  margin: 1rem auto;
+  height: auto;
+}
+/* 2.  h2 und h3  anpassen */
+#location h2 {
+  color: var(--baige);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  padding: 3rem;
+}
+h3 {
+  font-family: "robotothin", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding-top: 2rem;
+}
+/* 3. orange strich mit classe strich_kurz */
+
+#location .strich_kurz {
+  height: 1px;
+  width: 85vw;
+  margin: auto;
+  background: rgba(226, 141, 71, 0.5);
+}
+
+/* 4. bilder mit grid platzieren section locotion und terrasse*/
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 1rem;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+.container .bilder img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-filter: grayscale(40%);
+  filter: grayscale(40%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.bilder {
+  overflow: hidden;
+}
+/* 4.1  bilder richten section location */
+
+.container .höhe_zwei {
+  grid-row: span 2;
+}
+.container .höhe_zwei img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/*4.2  bilder richten section terrasse*/
+
+.container .höhe_zweieins {
+  grid-row: span 2;
+}
+.container .höhe_zweieins img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* 4.3 bild haus */
+#location .haus {
+  width: 90vw;
+  height: 40vh;
+  background-image: url(../bilder/restaurant/house_abend.jpg);
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-filter: grayscale(40%);
+  filter: grayscale(40%);
+}
+/* 4.4 bilder hover effekt  */
+
+.container .galerie img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+#location .haus:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+/* 5.0 lightbox */
+
+#lightbox_overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vw;
+  background: var(--braun);
+  z-index: 988;
+  top: 0;
+  display: none;
+}
+
+#lightbox_overlay #lightbox_inhalt {
+  width: 80%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  right: 10%;
+}
+#lightbox_overlay #lightbox_inhalt img {
+  width: 100%;
+  height: auto;
+}
+#lightbox_overlay #lightbox_inhalt .icon_nav {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  padding: 0.5rem;
+}
+
+/* 5.1 lightbox icon */
+
+#lightbox_overlay #lightbox_inhalt .icon_nav .icon_schliessen {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../bilder/icon/kreuz.svg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* 6.0 media queries */
+
+@media all and (max-width: 1086px) {
+  /* beide section breite hintergrung  */
+
+  #location,
+  #terrasse {
+    width: 100vw;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+  #location .strich_kurz {
+    width: 90vw;
+  }
+  #location h2 {
+    padding: 2rem;
+  }
+  @media all and (max-width: 900px) {
+    /* section location: haus bild */
+    #location .haus {
+      width: 100vw;
+      height: 20vh;
+      margin: 0;
+    }
+
+    /* h2 galerie */
+    #location h2 {
+      font-size: 2rem;
+    }
+
+    /* h3 titel restaurant und terrasse */
+    #location h3,
+    #terrasse h3 {
+      font-size: 1.5rem;
+    }
+
+    /* galerie */
+    #location .container,
+    #terrasse .container {
+      padding: 0.5rem;
+    }
+    #location .galerie,
+    #terrasse .galerie {
+      gap: 0.1rem;
+    }
+
+    /* lightbox */
+    #lightbox_overlay {
+      height: 100%;
+    }
+    #lightbox_overlay #lightbox_inhalt {
+      top: 30%;
+    }
+    #lightbox_overlay #lightbox_inhalt .icon_nav .icon_schliessen {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
